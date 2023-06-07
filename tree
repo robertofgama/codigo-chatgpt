@@ -1,0 +1,69 @@
+.
+├── nodemon.json
+├── package.json
+├── package-lock.json
+├── README.md
+├── src
+│   ├── app.js
+│   ├── config
+│   │   └── database.js
+│   ├── controllers
+│   │   ├── bak
+│   │   │   ├── ClientsAddressesController.js
+│   │   │   ├── ProductsController.js
+│   │   │   ├── TokenController.js
+│   │   │   ├── UsersController.js
+│   │   │   └── UsersFunctionsController.js
+│   │   ├── ClientsController.js
+│   │   ├── HomeController.js
+│   │   ├── InfosAddressesController.js
+│   │   └── InfosPhonesController.js
+│   ├── database
+│   │   ├── index.js
+│   │   ├── migrations
+│   │   │   ├── 20230529193948-table-g_addresses.js
+│   │   │   ├── 20230529200724-table-b_clients_name.js
+│   │   │   ├── 20230529201102-table-g_phones.js
+│   │   │   ├── 20230530171929-table-b_clients_register.js
+│   │   │   └── bak
+│   │   │       ├── 20230428012335-table-products-create.js
+│   │   │       ├── 20230428231510-table-user-functions-create.js
+│   │   │       ├── 20230429175614-table-users-create.js
+│   │   │       ├── 20230502122324-create-table-c_addresses.js
+│   │   │       ├── 20230502130456-create-table-a_clients.js
+│   │   │       └── 20230502134413-create-table-b_clients_addresses.js
+│   │   └── seeds
+│   │       ├── 20230529195210-g_addresses-seed.js
+│   │       ├── 20230530114208-b_clients_name-seed.js
+│   │       └── 20230530114510-g_phones-seed.js
+│   ├── middlewares
+│   │   └── loginRequired.js
+│   ├── models
+│   │   ├── bak
+│   │   │   ├── AClients.js
+│   │   │   ├── Address.js
+│   │   │   ├── BClientsAddresses.js
+│   │   │   ├── Product.js
+│   │   │   ├── UserFunction.js
+│   │   │   └── User.js
+│   │   ├── BClientName.js
+│   │   ├── BClientRegister.js
+│   │   ├── GAddress.js
+│   │   └── GPhone.js
+│   ├── routes
+│   │   ├── bak
+│   │   │   ├── clientsAddressesRoutes.js
+│   │   │   ├── productsRoutes.js
+│   │   │   ├── tokenRoutes.js
+│   │   │   ├── usersFunctionsRoutes.js
+│   │   │   └── usersRoutes.js
+│   │   ├── clientsRoutes.js
+│   │   ├── homeRoutes.js
+│   │   ├── infosAddressesRoutes.js
+│   │   └── infosPhonesRoutes.js
+│   └── server.js
+├── temp
+│   └── ChatGPT.md
+└── tree
+
+15 directories, 52 files

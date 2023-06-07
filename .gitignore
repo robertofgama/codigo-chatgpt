@@ -1,0 +1,7 @@
+temp
+node_modules
+package-lock.json
+dist
+.env
+uploads/*.*
+uploads/images/*.*
