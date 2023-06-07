@@ -1,35 +1,32 @@
 import Sequelize, { Model } from 'sequelize';
 
-export default class GPhone extends Model {
+export default class BClientRegister extends Model {
   static init(sequelize) {
     super.init(
       {
-        phone_number: {
-          type: Sequelize.INTEGER,
-          defaultValue: '',
-          validate: {
-            notEmpty: {
-              msg: 'Campo não pode ser vazio.',
-            },
-          },
-        },
-        cod_area: {
+        client_id: {
           type: Sequelize.INTEGER,
         },
-        cod_country: {
-          type: Sequelize.INTEGER,
+        address_id: {
+          type: Sequelize.STRING,
+        },
+        phones_id: {
+          type: Sequelize.STRING,
         },
       },
       {
         sequelize,
-        tableName: 'g_phones',
+        tableName: 'b_clients_register',
       },
     );
     return this;
   }
 
   static associate(models) {
-    this.belongsToMany(models.BClientName, { through: 'b_clients_register', foreignKey: 'phones_id' });
-    this.belongsToMany(models.GAddress, { through: 'b_clients_register', foreignKey: 'phones_id' });
+    this.belongsToMany(models.GAddress, { through: 'b_clients_register', foreignKey: 'addresses_id' });
+    // this.belongsToMany(models.GAddress, { through: 'b_clients_register', foreignKey: 'client_id' });
+    this.belongsToMany(models.GPhone, { through: 'b_clients_register', foreignKey: 'phones_id' });
+    // this.belongsToMany(models.GPhone, { through: 'b_clients_register', foreignKey: 'client_id' });
+    this.belongsToMany(models.BClientName, { through: 'b_clients_register', foreignKey: 'client_id' });
   }
 }

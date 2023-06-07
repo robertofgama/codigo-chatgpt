@@ -35,6 +35,8 @@ export default class GAddress extends Model {
   }
 
   static associate(models) {
+    this.belongsToMany(models.BClientRegister, { through: 'b_clients_register', foreignKey: 'addresses_id' });
+
     this.belongsToMany(models.BClientName, { through: 'b_clients_register', foreignKey: 'address_id' });
     this.belongsToMany(models.GPhone, { through: 'b_clients_register', foreignKey: 'address_id' });
   }
